@@ -16,7 +16,7 @@ a, a:visited, a:hover, a:active {
     display:flex;
     align-items:center;
     justify-content: right;
-    padding:20px;
+    padding:40px 20px;
 }
 .nav-link{
     font-size:22px;
@@ -27,15 +27,39 @@ a, a:visited, a:hover, a:active {
 .nav-link:hover{
     border-bottom: solid 2px #FF7D00;
 }
+.burger {
+    display: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.line {
+    height: 2px;
+    width: 35px;
+    margin: 0.5rem 0;
+    background: #15616D;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+.nav-bar.show .line1 {
+    transform: translate(-10px) rotate(45deg) translate(15px);
+}
+.nav-bar.show .line2 {
+    opacity: 0;
+}
+.nav-bar.show .line3 {
+    transform: translate(-10px) rotate(-45deg) translate(15px);
+}
+.nav-bar.show .nav-links {
+    transform: translateX(0%);
+}
+
 .intro{
     display: flex;
-    align-items: center;
     justify-content: space-evenly;
-    margin:20px;
+    margin:10px 20px 20px 20px;
 }
 .intro-text{
     padding:30px;
-    margin: 0 auto;
+    margin-top: 180px;
 }
 .about-me-text{
     font-size:24px;
@@ -59,15 +83,90 @@ a, a:visited, a:hover, a:active {
     border-radius: 50%;
     padding:50px;
 }
+.media-links{
+   margin-top:100px;
+}
+.media-link{
+    padding-right: 40px;
+    width: 50px;
+    height:50px;
+}
 
 @media screen and (max-width: 1250px) {
     .greeting-part1, .name{
         float:none;
     }
+    .media-links{
+        margin-top:50px;
+     }
+     .intro-text{
+        margin-top: 100px;
+    }
 }
 
-@media screen and (max-width: 780px) {
-    /* .headshot{
+@media screen and (max-width: 869px) {
+    .headshot{
         width: 300px;
-    } */
+    }
+    .greeting{
+        font-size: 34px;
+    }
+    .intro-text{
+        margin-top: 40px;
+    }
+    .media-links{
+        margin-top:20px;
+     }
+     .media-link{
+        width: 35px;
+        height:35px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .burger {
+        display: block;
+    }
+    .nav-bar{
+        justify-content:none;
+    }
+    .nav-links {
+        position: absolute;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        z-index: 100;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: calc(100% - 80px );
+        display:flex;
+        flex-direction: column;
+        background: #15616D;
+        color: #FFECD1;
+        transform: translateX(-100%);
+        transition: transform 1s ease;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+    .nav-link{
+        margin:20px 20px 0 20px;
+        font-size:28px;
+        padding:0;
+    }
+    .nav-link:hover{
+        border-bottom: solid 2px transparent;
+    }
+    .headshot{
+        width: 200px;
+    }
+    .greeting{
+        font-size: 28px;
+    }
+    .about-me-text{
+        font-size:20px;
+    }
+    .media-link{
+        width: 30px;
+        height:30px;
+    }
 }
