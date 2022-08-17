@@ -1,0 +1,40 @@
+*{
+margin : 0;
+padding: 0;
+}
+
+a{
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    text-transform: none;
+}
+a, a:visited, a:hover, a:active {
+    color: inherit;
+}
+.nav-bar{
+    display:flex;
+    align-items:center;
+    justify-content: right;
+    padding:20px;
+}
+.nav-link{
+    font-size:20px;
+    margin:15px;
+    padding:5px;
+    border-bottom: solid 2px transparent;
+}
+.nav-link:hover{
+    border-bottom: solid 2px #FCA311;
+}
+.intro{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    margin:20px;
+}
+.headshot{
+    width: 400px;
+    height: auto;
+    border-radius: 50%;
+}
