@@ -19,22 +19,55 @@ a, a:visited, a:hover, a:active {
     padding:20px;
 }
 .nav-link{
-    font-size:20px;
+    font-size:22px;
     margin:15px;
     padding:5px;
     border-bottom: solid 2px transparent;
 }
 .nav-link:hover{
-    border-bottom: solid 2px #FCA311;
+    border-bottom: solid 2px #FF7D00;
 }
 .intro{
     display: flex;
     align-items: center;
-    justify-content:space-around;
+    justify-content: space-evenly;
     margin:20px;
 }
+.intro-text{
+    padding:30px;
+    margin: 0 auto;
+}
+.about-me-text{
+    font-size:24px;
+}
+.greeting{
+    display: inline-block;
+    font-size: 44px;
+}
+.greeting-part1{
+    float:left;
+    margin-right: 0.25em;
+}
+.name{
+    float: right;
+    color: #15616D;
+    font-weight:700;
+}
 .headshot{
-    width: 400px;
+    width: 450px;
     height: auto;
     border-radius: 50%;
+    padding:50px;
+}
+
+@media screen and (max-width: 1250px) {
+    .greeting-part1, .name{
+        float:none;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    /* .headshot{
+        width: 300px;
+    } */
 }
