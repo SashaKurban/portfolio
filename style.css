@@ -155,6 +155,26 @@ a, a:visited, a:hover, a:active {
     padding: 10px;
 
 }
+/* projects */
+.project-name{
+    font-size:32px;
+    color: #78290F;
+    font-weight:600;
+}
+/* contact */
+.contact{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.address{
+    font-size:32px;
+    color: #15616D;
+    font-weight:600;
+}
+footer .media-links{
+    margin-top:0px;
+}
 @media screen and (max-width: 1250px) {
     .greeting-part1, .name{
         float:none;
@@ -217,13 +237,12 @@ a, a:visited, a:hover, a:active {
     .nav-links {
         position: absolute;
         overflow: hidden;
-        margin: 0;
-        padding: 0;
+        padding: 30px;
         z-index: 100;
         top: 0;
         bottom: 0;
         left: 0;
-        width: calc(100% - 65px );
+        width: calc(100% - 140px );
         display: flex;
         flex-direction: column;
         background: #15616D;
@@ -268,6 +287,16 @@ a, a:visited, a:hover, a:active {
     }
     .info-card{
         font-size:20px;
+    }
+    /* contact */
+    .contact{
+        display:block;
+    }
+    footer .media-links{
+        margin-top:20px;
+    }
+    .address{
+        font-size:26px;
     }
 }
 
