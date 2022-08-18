@@ -1,8 +1,12 @@
+/* general settings */
 *{
 margin : 0;
 padding: 0;
 }
-
+/* for mobile nav to prevent scroll when menu is open */
+.no-scroll{
+    overflow:hidden;
+}
 a{
     text-decoration: none;
     background-color: transparent;
@@ -12,6 +16,7 @@ a{
 a, a:visited, a:hover, a:active {
     color: inherit;
 }
+/* nav bar */
 .nav-bar{
     display:flex;
     align-items:center;
@@ -27,6 +32,7 @@ a, a:visited, a:hover, a:active {
 .nav-link:hover{
     border-bottom: solid 2px #FF7D00;
 }
+/* mobile nav  */
 .burger {
     display: none;
     padding: 0.5rem;
@@ -51,7 +57,7 @@ a, a:visited, a:hover, a:active {
 .nav-bar.show .nav-links {
     transform: translateX(0%);
 }
-
+/* about me section */
 .intro{
     display: flex;
     justify-content: space-evenly;
@@ -91,6 +97,39 @@ a, a:visited, a:hover, a:active {
     width: 50px;
     height:50px;
 }
+/* info cards */
+.info-card{
+    margin:20px;
+    padding:20px;
+}
+/* education card */
+.info-card h1{
+    font-size: 44px;
+    color: #001524;
+    margin-bottom:10px;
+}
+.school{
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    padding-top:10px;
+    font-size:24px;
+}
+/* skills section */
+.skills{
+    display:flex;
+    align-items: center;
+}
+.skills ul{
+    margin:30px 60px 30px 15px;
+    font-size:24px;
+}
+.skills li{
+    padding:15px;
+}
+ul{
+    list-style-type: none;
+}
 
 @media screen and (max-width: 1250px) {
     .greeting-part1, .name{
@@ -101,6 +140,11 @@ a, a:visited, a:hover, a:active {
      }
      .intro-text{
         margin-top: 100px;
+    }
+    /* education */
+    .school{
+        display:block;
+        padding-top:10px;
     }
 }
 
@@ -124,11 +168,13 @@ a, a:visited, a:hover, a:active {
 }
 
 @media screen and (max-width: 769px) {
+    /* mobile nav */
     .burger {
         display: block;
     }
     .nav-bar{
         justify-content:none;
+        padding:10px;
     }
     .nav-links {
         position: absolute;
@@ -139,7 +185,7 @@ a, a:visited, a:hover, a:active {
         top: 0;
         bottom: 0;
         left: 0;
-        width: calc(100% - 80px );
+        width: calc(100% - 65px );
         display:flex;
         flex-direction: column;
         background: #15616D;
@@ -156,11 +202,9 @@ a, a:visited, a:hover, a:active {
     .nav-link:hover{
         border-bottom: solid 2px transparent;
     }
-    .headshot{
-        width: 200px;
-    }
+    /* about me */
     .greeting{
-        font-size: 28px;
+        font-size: 36px;
     }
     .about-me-text{
         font-size:20px;
@@ -168,5 +212,28 @@ a, a:visited, a:hover, a:active {
     .media-link{
         width: 30px;
         height:30px;
+    }
+    .intro{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: space-evenly;
+    }
+    .headshot{
+        width: 300px;
+    }
+    .intro-text{
+        margin-top:5px;
+        padding:0 45px 0 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .headshot{
+        width: 250px;
+    }
+    .intro-text{
+        padding:0 10px 0 10px;
+        margin-top:0;
     }
 }
